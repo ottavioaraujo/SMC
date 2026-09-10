@@ -63,18 +63,10 @@ http://127.0.0.1:8000/
 - `/painel/` - Painel de monitoramento
 - `/admin/` - Administracao do Django
 
-## Criar usuario administrador
-
-Para acessar o painel administrativo do Django, crie um superusuario:
-
-```bash
-python manage.py createsuperuser
+## Instalar dependencias
 ```
+pip install -r requirements.txt
 
-Depois acesse:
-
-```text
-http://127.0.0.1:8000/admin/
 ```
 
 ## Comandos uteis
