@@ -93,44 +93,15 @@ a {
 }
 
 .brand-logo {
-    gap: 1.55rem;
-    color: currentColor;
+    flex: 0 0 auto;
+    width: clamp(180px, 17vw, 260px);
     letter-spacing: 0
 }
 
-.brand-logo-main {
-    position: relative;
-    display: inline-block;
-    padding-bottom: .36rem;
-    font-size: clamp(2.2rem, 3vw, 3.05rem);
-    font-weight: 800;
-    line-height: .95
-}
-
-.brand-logo-main:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    background: currentColor
-}
-
-.brand-logo-divider {
-    width: 2px;
-    height: 3.45rem;
-    background: currentColor;
-    opacity: .18
-}
-
-.brand-logo-text {
-    position: relative;
-    display: inline-block;
-    padding: .08rem 0 .34rem;
-    font-size: clamp(1.08rem, 1.65vw, 1.58rem);
-    font-weight: 500;
-    line-height: 1.12
+.brand-logo img {
+    display: block;
+    width: 100%;
+    height: auto
 }
 
 .nav {
@@ -689,19 +660,7 @@ footer p,
     }
 
     .brand-logo {
-        gap: .75rem
-    }
-
-    .brand-logo-main {
-        font-size: 1.75rem
-    }
-
-    .brand-logo-divider {
-        height: 2.55rem
-    }
-
-    .brand-logo-text {
-        font-size: .9rem
+        width: 168px
     }
 
     .nav {
@@ -797,13 +756,8 @@ footer p,
         padding: 0 1rem
     }
 
-    .brand-logo {
-        gap: .55rem
-    }
-
-    .brand-logo-divider,
-    .brand-logo-text {
-        display: none
+    .header .brand-logo {
+        width: 92px
     }
 
     .header-cta {
@@ -811,9 +765,8 @@ footer p,
         text-align: right
     }
 
-    footer .brand-logo-divider,
-    footer .brand-logo-text {
-        display: inline-block
+    footer .brand-logo {
+        width: 168px
     }
 }
 
