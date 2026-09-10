@@ -11,103 +11,103 @@
 </head>
 
 <body>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <header class="header">
-        <a class="brand brand-logo" href="#inicio" aria-label="SMC, voltar ao início">
+    <div class="progresso" aria-hidden="true"></div>
+    <header class="cabecalho">
+        <a class="marca marca-logo" href="#inicio" aria-label="SMC, voltar ao início">
             <img src="{% static 'monitoramento/landing/imgs/Logo para fundo escuro sem fundo.svg' %}"
                 alt="SMC - Monitoramento de cisternas">
         </a>
-        <nav class="nav" aria-label="Navegação principal"><a class="active" href="#inicio">Início</a><a href="#sobre">O
+        <nav class="menu" aria-label="Navegação principal"><a class="ativo" href="#inicio">Início</a><a href="#sobre">O
                 sistema</a><a href="#como-funciona">Como funciona</a></nav>
-        <a class="header-cta" href="#acesso">Acessar sistema <span>↗</span></a>
+        <a class="chamada-topo" href="#acesso">Acessar sistema <span>↗</span></a>
     </header>
     <main>
-        <section class="hero section" id="inicio">
-            <div class="hero-copy reveal">
-                <p class="eyebrow"><span></span> Gestão inteligente da água</p>
+        <section class="destaque secao" id="inicio">
+            <div class="texto-destaque revelar">
+                <p class="rotulo"><span></span> Gestão inteligente da água</p>
                 <h1>Água monitorada.<br><em>Tranquilidade</em> para todos.</h1>
-                <p class="hero-text">O SMC acompanha o nível das cisternas e transforma dados em decisões simples para
+                <p class="texto-principal">O SMC acompanha o nível das cisternas e transforma dados em decisões simples para
                     garantir segurança hídrica onde ela mais importa.</p>
-                <div class="hero-actions"><a class="button button-primary" href="#acesso">Conhecer o sistema
-                        <span>→</span></a><a class="text-link" href="#sobre">Descubra como funciona <span>↓</span></a>
+                <div class="acoes-destaque"><a class="botao botao-principal" href="#acesso">Conhecer o sistema
+                        <span>→</span></a><a class="link-texto" href="#sobre">Descubra como funciona <span>↓</span></a>
                 </div>
             </div>
-            <div class="hero-visual reveal delay-1">
-                <div class="photo-frame"><img src="{% static 'monitoramento/landing/imgs/image.png' %}"
+            <div class="visual-destaque revelar atraso-1">
+                <div class="moldura-foto"><img src="{% static 'monitoramento/landing/imgs/image.png' %}"
                         alt="Cisterna instalada em uma residência rural">
-                    <div class="photo-gradient"></div>
-                    <div class="water-card"><span class="pulse"></span>
-                        <div><small>Nível atual</small><strong class="water-level" data-start="53"
+                    <div class="degrade-foto"></div>
+                    <div class="cartao-agua"><span class="pulso"></span>
+                        <div><small>Nível atual</small><strong class="nivel-agua" data-start="53"
                                 data-target="97">97<sup>%</sup></strong></div>
-                        <div class="water-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+                        <div class="barras-agua" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
                     </div>
                 </div>
-                <div class="hero-orbit orbit-one"></div>
-                <div class="hero-orbit orbit-two"></div>
-                <p class="image-caption">Tecnologia a serviço do cuidado com a água</p>
+                <div class="orbita-destaque orbita-um"></div>
+                <div class="orbita-destaque orbita-dois"></div>
+                <p class="legenda-imagem">Tecnologia a serviço do cuidado com a água</p>
             </div>
-            <a class="scroll-hint" href="#sobre"><span></span> Role para explorar</a>
+            <a class="dica-rolagem" href="#sobre"><span></span> Role para explorar</a>
         </section>
-        <section class="intro section" id="sobre">
-            <div class="section-number reveal">01</div>
-            <div class="intro-heading reveal">
-                <p class="eyebrow"><span></span> Sobre o SMC</p>
+        <section class="sobre secao" id="sobre">
+            <div class="numero-secao revelar">01</div>
+            <div class="titulo-sobre revelar">
+                <p class="rotulo"><span></span> Sobre o SMC</p>
                 <h2>Cada gota conta.<br>Por isso, <em>cada dado</em> também.</h2>
             </div>
-            <div class="intro-content reveal delay-1">
+            <div class="conteudo-sobre revelar atraso-1">
                 <p>O Sistema de Monitoramento de Cisternas torna visível o que antes só era percebido quando faltava: o
-                    nível da água disponível para cada família.</p><a class="arrow-link" href="#como-funciona">Entenda a
+                    nível da água disponível para cada família.</p><a class="link-seta" href="#como-funciona">Entenda a
                     solução <span>→</span></a>
             </div>
         </section>
-        <section class="features section" id="como-funciona">
-            <div class="features-top reveal">
+        <section class="recursos secao" id="como-funciona">
+            <div class="topo-recursos revelar">
                 <div>
-                    <p class="eyebrow"><span></span> Simples por natureza</p>
+                    <p class="rotulo"><span></span> Simples por natureza</p>
                     <h2>Informação clara,<br><em>cuidado contínuo.</em></h2>
                 </div>
             </div>
-            <div class="feature-grid">
-                <article class="feature-card reveal"><span class="card-index">01</span>
-                    <div class="feature-icon sensor-icon">⌁</div>
+            <div class="grade-recursos">
+                <article class="cartao-recurso revelar"><span class="indice-cartao">01</span>
+                    <div class="icone-recurso icone-sensor">⌁</div>
                     <h3>Monitora</h3>
                     <p>Acompanhe o volume de água das cisternas com uma visualização direta e atualizada.</p>
                 </article>
-                <article class="feature-card reveal delay-1"><span class="card-index">02</span>
-                    <div class="feature-icon alert-icon">!</div>
+                <article class="cartao-recurso revelar atraso-1"><span class="indice-cartao">02</span>
+                    <div class="icone-recurso icone-alerta">!</div>
                     <h3>Alerta</h3>
                     <p>Receba avisos quando o nível exige atenção e antecipe decisões importantes.</p>
                 </article>
-                <article class="feature-card reveal delay-2"><span class="card-index">03</span>
-                    <div class="feature-icon report-icon">↗</div>
+                <article class="cartao-recurso revelar atraso-2"><span class="indice-cartao">03</span>
+                    <div class="icone-recurso icone-relatorio">↗</div>
                     <h3>Organiza</h3>
                     <p>Tenha dados reunidos para cuidar melhor das pessoas, das cisternas e do território.</p>
                 </article>
             </div>
         </section>
-        <section class="statement section">
-            <div class="statement-water" aria-hidden="true"></div>
-            <p class="eyebrow reveal"><span></span> Uma ferramenta, um impacto real</p>
-            <h2 class="reveal">Cuidar da água é<br>cuidar do <em>futuro.</em></h2>
-            <p class="statement-text reveal">Tecnologia próxima, dados que fazem sentido e mais segurança para quem
+        <section class="mensagem secao">
+            <div class="agua-mensagem" aria-hidden="true"></div>
+            <p class="rotulo revelar"><span></span> Uma ferramenta, um impacto real</p>
+            <h2 class="revelar">Cuidar da água é<br>cuidar do <em>futuro.</em></h2>
+            <p class="texto-mensagem revelar">Tecnologia próxima, dados que fazem sentido e mais segurança para quem
                 depende da água todos os dias.</p>
         </section>
-        <section class="access section" id="acesso">
-            <div class="access-copy reveal">
-                <p class="eyebrow"><span></span> Pronto para começar?</p>
+        <section class="acesso secao" id="acesso">
+            <div class="texto-acesso revelar">
+                <p class="rotulo"><span></span> Pronto para começar?</p>
                 <h2>Seu território.<br>Sua água. <em>Seu controle.</em></h2>
             </div>
-            <div class="access-action reveal delay-1">
-                <p>Acesse a plataforma e acompanhe suas cisternas com clareza.</p><a class="button button-light"
+            <div class="acao-acesso revelar atraso-1">
+                <p>Acesse a plataforma e acompanhe suas cisternas com clareza.</p><a class="botao botao-claro"
                     href="{% url 'painel' %}">Entrar no SMC <span>→</span></a>
             </div>
         </section>
     </main>
-    <footer><a class="brand brand-logo" href="#inicio" aria-label="SMC, voltar ao início">
+    <footer><a class="marca marca-logo" href="#inicio" aria-label="SMC, voltar ao início">
             <img src="{% static 'monitoramento/landing/imgs/Logo para fundo escuro sem fundo.svg' %}"
                 alt="SMC - Monitoramento de cisternas">
         </a>
-        <p>Sistema de Monitoramento de Cisternas</p><a href="#inicio" class="back-top">Voltar ao topo ↑</a>
+        <p>Sistema de Monitoramento de Cisternas</p><a href="#inicio" class="voltar-topo">Voltar ao topo ↑</a>
     </footer>
     <script src="{% static 'monitoramento/landing/Script.js' %}"></script>
 </body>

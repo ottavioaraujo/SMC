@@ -1,5 +1,5 @@
-const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.nav a');
+const secoes = document.querySelectorAll('main section[id]');
+const linksMenu = document.querySelectorAll('.menu a');
 
 document.addEventListener('wheel', (event) => {
   if (event.ctrlKey) event.preventDefault();
@@ -12,65 +12,65 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('gesturestart', (event) => event.preventDefault());
 document.addEventListener('dblclick', (event) => event.preventDefault());
 
-function updateProgress() {
-  const height = document.documentElement.scrollHeight - window.innerHeight;
-  document.documentElement.style.setProperty('--scroll', `${height ? (window.scrollY / height) * 100 : 0}%`);
+function atualizarProgresso() {
+  const altura = document.documentElement.scrollHeight - window.innerHeight;
+  document.documentElement.style.setProperty('--scroll', `${altura ? (window.scrollY / altura) * 100 : 0}%`);
 }
 
-window.addEventListener('scroll', updateProgress, { passive: true });
-updateProgress();
+window.addEventListener('scroll', atualizarProgresso, { passive: true });
+atualizarProgresso();
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    entry.target.classList.toggle('visible', entry.isIntersecting);
+const observadorRevelar = new IntersectionObserver((entradas) => {
+  entradas.forEach((entrada) => {
+    entrada.target.classList.toggle('visivel', entrada.isIntersecting);
   });
 }, { threshold: 0.16 });
 
-document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+document.querySelectorAll('.revelar').forEach((elemento) => observadorRevelar.observe(elemento));
 
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+const observadorSecao = new IntersectionObserver((entradas) => {
+  entradas.forEach((entrada) => {
+    if (!entrada.isIntersecting) return;
+    linksMenu.forEach((link) => link.classList.toggle('ativo', link.getAttribute('href') === `#${entrada.target.id}`));
   });
 }, { rootMargin: '-35% 0px -55% 0px' });
 
-sections.forEach((section) => sectionObserver.observe(section));
+secoes.forEach((secao) => observadorSecao.observe(secao));
 
-const waterLevel = document.querySelector('.water-level');
-const waterBars = document.querySelector('.water-bars');
+const nivelAgua = document.querySelector('.nivel-agua');
+const barrasAgua = document.querySelector('.barras-agua');
 
-if (waterLevel) {
-  const start = Number(waterLevel.dataset.start);
-  const target = Number(waterLevel.dataset.target);
-  const duration = 9400;
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (nivelAgua) {
+  const inicio = Number(nivelAgua.dataset.start);
+  const alvo = Number(nivelAgua.dataset.target);
+  const duracao = 9400;
+  const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const setLevel = (value) => {
-    waterLevel.innerHTML = `${value}<sup>%</sup>`;
+  const definirNivel = (valor) => {
+    nivelAgua.innerHTML = `${valor}<sup>%</sup>`;
   };
 
-  const animateWaterLevel = (timestamp) => {
-    const initialTime = timestamp;
+  const animarNivel = (timestamp) => {
+    const tempoInicial = timestamp;
 
-    const step = (now) => {
-      const progress = Math.min((now - initialTime) / duration, 1);
-      const easedProgress = 1 - Math.pow(1 - progress, 3);
-      const currentLevel = start + (target - start) * easedProgress;
+    const passo = (agora) => {
+      const progresso = Math.min((agora - tempoInicial) / duracao, 1);
+      const progressoSuave = 1 - Math.pow(1 - progresso, 3);
+      const nivelAtual = inicio + (alvo - inicio) * progressoSuave;
 
-      setLevel(Math.round(currentLevel));
-      if (waterBars) waterBars.style.setProperty('--water-level', currentLevel / 100);
+      definirNivel(Math.round(nivelAtual));
+      if (barrasAgua) barrasAgua.style.setProperty('--nivel-agua', nivelAtual / 100);
 
-      if (progress < 1) requestAnimationFrame(step);
+      if (progresso < 1) requestAnimationFrame(passo);
     };
 
-    requestAnimationFrame(step);
+    requestAnimationFrame(passo);
   };
 
-  if (reduceMotion) {
-    setLevel(target);
-    if (waterBars) waterBars.style.setProperty('--water-level', target / 100);
+  if (reduzirMovimento) {
+    definirNivel(alvo);
+    if (barrasAgua) barrasAgua.style.setProperty('--nivel-agua', alvo / 100);
   } else {
-    requestAnimationFrame(animateWaterLevel);
+    requestAnimationFrame(animarNivel);
   }
 }

@@ -6,13 +6,13 @@
 }
 
 html {
-    touch-action: pan-y
+    touch-action: pan-y;
+    background: var(--navy)
 }
 
 html,
 body {
-    -ms-overflow-style: none;
-    
+    -ms-overflow-style: none
 }
 
 ::-webkit-scrollbar {
@@ -43,9 +43,10 @@ html {
 
 body {
     color: var(--ink);
-    background: var(--paper);
+    background: var(--navy);
     font-family: 'DM Sans', Arial, sans-serif;
-    overflow-x: hidden
+    overflow-x: hidden;
+    min-height: 100svh
 }
 
 a {
@@ -53,11 +54,11 @@ a {
     text-decoration: none
 }
 
-.section {
+.secao {
     scroll-snap-align: start
 }
 
-.scroll-progress {
+.progresso {
     position: fixed;
     z-index: 20;
     top: 0;
@@ -67,7 +68,7 @@ a {
     background: var(--sky)
 }
 
-.header {
+.cabecalho {
     position: absolute;
     z-index: 10;
     top: 0;
@@ -83,7 +84,7 @@ a {
     color: #fff
 }
 
-.brand {
+.marca {
     display: inline-flex;
     align-items: center;
     gap: .55rem;
@@ -92,46 +93,46 @@ a {
     letter-spacing: .08em
 }
 
-.brand-logo {
+.marca-logo {
     flex: 0 0 auto;
     width: clamp(180px, 17vw, 260px);
     letter-spacing: 0
 }
 
-.brand-logo img {
+.marca-logo img {
     display: block;
     width: 100%;
     height: auto
 }
 
-.nav {
+.menu {
     display: flex;
     gap: 2.1rem;
     font-size: .84rem
 }
 
-.nav a {
+.menu a {
     opacity: .65;
     transition: opacity .25s
 }
 
-.nav a:hover,
-.nav a.active {
+.menu a:hover,
+.menu a.ativo {
     opacity: 1
 }
 
-.header-cta {
+.chamada-topo {
     font-size: .8rem;
     border-bottom: 1px solid rgba(255, 255, 255, .45);
     padding-bottom: .35rem
 }
 
-.header-cta span {
+.chamada-topo span {
     font-size: 1rem;
     margin-left: .35rem
 }
 
-.hero {
+.destaque {
     min-height: 100svh;
     background: var(--navy);
     color: #fff;
@@ -145,7 +146,7 @@ a {
     overflow: hidden
 }
 
-.hero:before {
+.destaque:before {
     content: '';
     position: absolute;
     width: 47vw;
@@ -160,7 +161,7 @@ a {
     z-index: -1
 }
 
-.eyebrow {
+.rotulo {
     color: var(--sky);
     font: 500 .67rem 'DM Mono', monospace;
     letter-spacing: .12em;
@@ -170,47 +171,47 @@ a {
     gap: .65rem
 }
 
-.eyebrow span {
+.rotulo span {
     width: 21px;
     height: 1px;
     background: currentColor
 }
 
-.hero h1,
-.intro h2,
-.features h2,
-.statement h2,
-.access h2 {
+.destaque h1,
+.sobre h2,
+.recursos h2,
+.mensagem h2,
+.acesso h2 {
     font: 600 clamp(3rem, 5.2vw, 5.8rem)/.99 'Playfair Display', Georgia, serif;
     letter-spacing: -.055em
 }
 
-.hero h1 {
+.destaque h1 {
     margin: 1.5rem 0 1.65rem;
     max-width: 730px
 }
 
-.hero h1 em,
+.destaque h1 em,
 h2 em {
     color: var(--sky);
     font-weight: inherit
 }
 
-.hero-text {
+.texto-principal {
     max-width: 480px;
     color: rgba(255, 255, 255, .72);
     font-size: 1rem;
     line-height: 1.75
 }
 
-.hero-actions {
+.acoes-destaque {
     display: flex;
     align-items: center;
     gap: 1.6rem;
     margin-top: 2.5rem
 }
 
-.button {
+.botao {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -221,45 +222,45 @@ h2 em {
     transition: transform .25s, background .25s
 }
 
-.button span {
+.botao span {
     font-size: 1.3rem;
     line-height: .6
 }
 
-.button:hover {
+.botao:hover {
     transform: translateY(-3px)
 }
 
-.button-primary {
+.botao-principal {
     background: var(--sky);
     color: var(--navy)
 }
 
-.text-link {
+.link-texto {
     font-size: .8rem;
     color: rgba(255, 255, 255, .85);
     border-bottom: 1px solid rgba(255, 255, 255, .38);
     padding-bottom: .4rem
 }
 
-.text-link span {
+.link-texto span {
     margin-left: .35rem
 }
 
-.hero-visual {
+.visual-destaque {
     position: relative;
     justify-self: end;
     width: min(100%, 530px)
 }
 
-.photo-frame {
+.moldura-foto {
     position: relative;
     height: min(57vh, 620px);
     overflow: hidden;
     border-radius: 180px 180px 8px 8px
 }
 
-.photo-frame img {
+.moldura-foto img {
     display: block;
     width: 100%;
     height: 100%;
@@ -269,13 +270,13 @@ h2 em {
     transform: scale(1.04)
 }
 
-.photo-gradient {
+.degrade-foto {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, transparent 40%, rgba(2, 31, 48, .65))
 }
 
-.water-card {
+.cartao-agua {
     position: absolute;
     left: 1.25rem;
     right: 1.25rem;
@@ -288,7 +289,7 @@ h2 em {
     backdrop-filter: blur(12px)
 }
 
-.water-card small {
+.cartao-agua small {
     display: block;
     color: rgba(255, 255, 255, .65);
     font: .63rem 'DM Mono', monospace;
@@ -296,16 +297,16 @@ h2 em {
     letter-spacing: .1em
 }
 
-.water-card strong {
+.cartao-agua strong {
     font-size: 1.8rem;
     line-height: 1.2
 }
 
-.water-card sup {
+.cartao-agua sup {
     font-size: .65rem
 }
 
-.pulse {
+.pulso {
     width: 7px;
     height: 7px;
     background: #86eaab;
@@ -313,8 +314,8 @@ h2 em {
     box-shadow: 0 0 0 5px rgba(134, 234, 171, .16)
 }
 
-.water-bars {
-    --water-level: .67;
+.barras-agua {
+    --nivel-agua: .67;
     flex: 1;
     height: 38px;
     display: flex;
@@ -322,59 +323,59 @@ h2 em {
     justify-content: flex-end;
     gap: 3px;
     transform-origin: bottom;
-    transform: scaleY(var(--water-level))
+    transform: scaleY(var(--nivel-agua))
 }
 
-.water-bars i {
+.barras-agua i {
     width: 5px;
     background: var(--sky)
 }
 
-.water-bars i:nth-child(1) {
+.barras-agua i:nth-child(1) {
     height: 30%;
     opacity: .4
 }
 
-.water-bars i:nth-child(2) {
+.barras-agua i:nth-child(2) {
     height: 50%;
     opacity: .55
 }
 
-.water-bars i:nth-child(3) {
+.barras-agua i:nth-child(3) {
     height: 100%;
     opacity: .7
 }
 
-.water-bars i:nth-child(4) {
+.barras-agua i:nth-child(4) {
     height: 150%
 }
 
-.water-bars i:nth-child(5) {
+.barras-agua i:nth-child(5) {
     height: 200%
 }
 
-.hero-orbit {
+.orbita-destaque {
     position: absolute;
     z-index: -1;
     border: 1px solid rgba(141, 212, 220, .25);
     border-radius: 50%
 }
 
-.orbit-one {
+.orbita-um {
     width: 250px;
     height: 250px;
     top: 12%;
     right: -15%
 }
 
-.orbit-two {
+.orbita-dois {
     width: 150px;
     height: 150px;
     bottom: -9%;
     left: -18%
 }
 
-.image-caption {
+.legenda-imagem {
     font: .58rem 'DM Mono', monospace;
     text-transform: uppercase;
     letter-spacing: .08em;
@@ -382,7 +383,7 @@ h2 em {
     color: rgba(255, 255, 255, .62)
 }
 
-.scroll-hint {
+.dica-rolagem {
     position: absolute;
     bottom: 1.8rem;
     left: clamp(1.5rem, 9vw, 10rem);
@@ -395,7 +396,7 @@ h2 em {
     letter-spacing: .08em
 }
 
-.scroll-hint span {
+.dica-rolagem span {
     display: block;
     height: 32px;
     width: 1px;
@@ -403,7 +404,7 @@ h2 em {
     animation: line 1.7s ease-in-out infinite
 }
 
-.intro {
+.sobre {
     min-height: 74svh;
     display: grid;
     grid-template-columns: .4fr 1.1fr .75fr;
@@ -413,35 +414,35 @@ h2 em {
     background: var(--cream)
 }
 
-.section-number,
-.card-index {
+.numero-secao,
+.indice-cartao {
     font: .7rem 'DM Mono', monospace;
     color: #5c7c88
 }
 
-.intro h2 {
+.sobre h2 {
     color: var(--ink);
     margin-top: 1.2rem
 }
 
-.intro h2 em,
-.features h2 em,
-.access h2 em {
+.sobre h2 em,
+.recursos h2 em,
+.acesso h2 em {
     color: var(--blue)
 }
 
-.intro-content {
+.conteudo-sobre {
     align-self: end;
     padding-bottom: 1.2rem
 }
 
-.intro-content p {
+.conteudo-sobre p {
     line-height: 1.8;
     color: #47616c;
     font-size: .98rem
 }
 
-.arrow-link {
+.link-seta {
     display: inline-flex;
     gap: 1rem;
     align-items: center;
@@ -452,49 +453,49 @@ h2 em {
     font-weight: 600
 }
 
-.arrow-link span {
+.link-seta span {
     font-size: 1.1rem
 }
 
-.features {
+.recursos {
     padding: 8rem clamp(1.5rem, 9vw, 10rem) 9rem;
     background: var(--paper)
 }
 
-.features-top {
+.topo-recursos {
     display: flex;
     align-items: end;
     justify-content: space-between;
     gap: 2rem
 }
 
-.features h2 {
+.recursos h2 {
     margin-top: 1.2rem
 }
 
-.feature-grid {
+.grade-recursos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 4.5rem;
     border-top: 1px solid var(--line)
 }
 
-.feature-card {
+.cartao-recurso {
     position: relative;
     min-height: 320px;
     padding: 1.4rem 2.3rem 1.6rem 0;
     border-right: 1px solid var(--line)
 }
 
-.feature-card:not(:first-child) {
+.cartao-recurso:not(:first-child) {
     padding-left: 2.3rem
 }
 
-.feature-card:last-child {
+.cartao-recurso:last-child {
     border-right: 0
 }
 
-.feature-icon {
+.icone-recurso {
     width: 48px;
     height: 48px;
     display: grid;
@@ -506,21 +507,21 @@ h2 em {
     font: 1.7rem 'Playfair Display', serif
 }
 
-.alert-icon {
+.icone-alerta {
     border-radius: 13px;
     font: 700 1.25rem 'DM Sans'
 }
 
-.report-icon {
+.icone-relatorio {
     border-radius: 0;
     transform: rotate(-45deg)
 }
 
-.feature-card h3 {
+.cartao-recurso h3 {
     font: 600 1.65rem 'Playfair Display', serif
 }
 
-.feature-card p {
+.cartao-recurso p {
     max-width: 260px;
     color: #5b7078;
     font-size: .88rem;
@@ -528,7 +529,7 @@ h2 em {
     margin-top: .75rem
 }
 
-.statement {
+.mensagem {
     min-height: 78svh;
     display: flex;
     flex-direction: column;
@@ -543,7 +544,7 @@ h2 em {
     padding: 5rem 1.5rem
 }
 
-.statement-water {
+.agua-mensagem {
     position: absolute;
     z-index: -1;
     width: 125vw;
@@ -556,18 +557,18 @@ h2 em {
     box-shadow: 0 0 0 95px rgba(141, 212, 220, .035), 0 0 0 190px rgba(141, 212, 220, .025)
 }
 
-.statement h2 {
+.mensagem h2 {
     margin: 1.3rem 0 1.5rem
 }
 
-.statement-text {
+.texto-mensagem {
     max-width: 460px;
     color: rgba(255, 255, 255, .64);
     font-size: .94rem;
     line-height: 1.8
 }
 
-.access {
+.acesso {
     display: grid;
     grid-template-columns: 1.1fr .55fr;
     gap: 8vw;
@@ -576,24 +577,24 @@ h2 em {
     padding: 8rem clamp(1.5rem, 9vw, 10rem)
 }
 
-.access h2 {
+.acesso h2 {
     margin-top: 1.2rem
 }
 
-.access .eyebrow {
+.acesso .rotulo {
     color: var(--blue)
 }
 
-.access-action {
+.acao-acesso {
     padding-bottom: .6rem
 }
 
-.access-action p {
+.acao-acesso p {
     line-height: 1.7;
     font-size: .93rem
 }
 
-.button-light {
+.botao-claro {
     color: #fff;
     background: var(--navy);
     margin-top: 2rem
@@ -610,31 +611,31 @@ footer {
 }
 
 footer p,
-.back-top {
+.voltar-topo {
     font-size: .72rem
 }
 
-.back-top {
+.voltar-topo {
     border-bottom: 1px solid rgba(255, 255, 255, .45);
     padding-bottom: .3rem
 }
 
-.reveal {
+.revelar {
     opacity: 0;
     transform: translateY(26px);
     transition: opacity .75s ease, transform .75s cubic-bezier(.2, .65, .25, 1)
 }
 
-.reveal.visible {
+.revelar.visivel {
     opacity: 1;
     transform: translateY(0)
 }
 
-.delay-1 {
+.atraso-1 {
     transition-delay: .13s
 }
 
-.delay-2 {
+.atraso-2 {
     transition-delay: .25s
 }
 
@@ -655,93 +656,93 @@ footer p,
 }
 
 @media(max-width:800px) {
-    .header {
+    .cabecalho {
         height: 78px
     }
 
-    .brand-logo {
+    .marca-logo {
         width: 168px
     }
 
-    .nav {
+    .menu {
         display: none
     }
 
-    .header-cta {
+    .chamada-topo {
         font-size: .72rem
     }
 
-    .hero {
+    .destaque {
         grid-template-columns: 1fr;
         padding: 8.3rem 1.5rem 5.5rem;
         gap: 3rem
     }
 
-    .hero h1 {
+    .destaque h1 {
         font-size: clamp(3.1rem, 13vw, 4.8rem)
     }
 
-    .hero-visual {
+    .visual-destaque {
         justify-self: stretch;
         width: min(100%, 480px)
     }
 
-    .photo-frame {
+    .moldura-foto {
         height: 390px;
         border-radius: 120px 120px 6px 6px
     }
 
-    .scroll-hint {
+    .dica-rolagem {
         display: none
     }
 
-    .intro {
+    .sobre {
         grid-template-columns: 1fr;
         gap: 1.6rem;
         min-height: auto;
         padding: 6rem 1.5rem
     }
 
-    .intro-content {
+    .conteudo-sobre {
         padding: 0
     }
 
-    .features {
+    .recursos {
         padding: 6rem 1.5rem
     }
 
-    .features-top {
+    .topo-recursos {
         display: block
     }
 
-    .feature-grid {
+    .grade-recursos {
         grid-template-columns: 1fr;
         margin-top: 3rem
     }
 
-    .feature-card,
-    .feature-card:not(:first-child) {
+    .cartao-recurso,
+    .cartao-recurso:not(:first-child) {
         min-height: auto;
         padding: 1.5rem 0 2.8rem;
         border-right: 0;
         border-bottom: 1px solid var(--line)
     }
 
-    .feature-icon {
+    .icone-recurso {
         margin-top: 2rem
     }
 
-    .statement {
+    .mensagem {
         min-height: 66svh
     }
 
-    .access {
+    .acesso {
         grid-template-columns: 1fr;
         gap: 3.5rem;
         padding: 6rem 1.5rem
     }
 
-    .access h2 {
+    .acesso h2 {
         font-size: clamp(2.9rem, 12vw, 4.5rem)
     }
 
@@ -752,20 +753,20 @@ footer p,
 }
 
 @media(max-width:520px) {
-    .header {
+    .cabecalho {
         padding: 0 1rem
     }
 
-    .header .brand-logo {
+    .cabecalho .marca-logo {
         width: 92px
     }
 
-    .header-cta {
+    .chamada-topo {
         max-width: 8.8rem;
         text-align: right
     }
 
-    footer .brand-logo {
+    footer .marca-logo {
         width: 168px
     }
 }
@@ -775,17 +776,17 @@ footer p,
         scroll-behavior: auto
     }
 
-    .reveal {
+    .revelar {
         opacity: 1;
         transform: none;
         transition: none
     }
 
-    .scroll-hint span {
+    .dica-rolagem span {
         animation: none
     }
 
-    .water-bars {
+    .barras-agua {
         transform: scaleY(.82)
     }
 }
