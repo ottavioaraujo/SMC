@@ -92,16 +92,45 @@ a {
     letter-spacing: .08em
 }
 
-.brand-mark {
-    display: grid;
-    place-items: center;
-    width: 29px;
-    height: 29px;
-    border: 1px solid currentColor;
-    border-radius: 50%;
-    font-size: 1.35rem;
-    line-height: 1;
-    transform: rotate(-18deg)
+.brand-logo {
+    gap: 1.55rem;
+    color: currentColor;
+    letter-spacing: 0
+}
+
+.brand-logo-main {
+    position: relative;
+    display: inline-block;
+    padding-bottom: .36rem;
+    font-size: clamp(2.2rem, 3vw, 3.05rem);
+    font-weight: 800;
+    line-height: .95
+}
+
+.brand-logo-main:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: currentColor
+}
+
+.brand-logo-divider {
+    width: 2px;
+    height: 3.45rem;
+    background: currentColor;
+    opacity: .18
+}
+
+.brand-logo-text {
+    position: relative;
+    display: inline-block;
+    padding: .08rem 0 .34rem;
+    font-size: clamp(1.08rem, 1.65vw, 1.58rem);
+    font-weight: 500;
+    line-height: 1.12
 }
 
 .nav {
@@ -659,6 +688,22 @@ footer p,
         height: 78px
     }
 
+    .brand-logo {
+        gap: .75rem
+    }
+
+    .brand-logo-main {
+        font-size: 1.75rem
+    }
+
+    .brand-logo-divider {
+        height: 2.55rem
+    }
+
+    .brand-logo-text {
+        font-size: .9rem
+    }
+
     .nav {
         display: none
     }
@@ -744,6 +789,31 @@ footer p,
     footer {
         gap: 1.2rem;
         flex-wrap: wrap
+    }
+}
+
+@media(max-width:520px) {
+    .header {
+        padding: 0 1rem
+    }
+
+    .brand-logo {
+        gap: .55rem
+    }
+
+    .brand-logo-divider,
+    .brand-logo-text {
+        display: none
+    }
+
+    .header-cta {
+        max-width: 8.8rem;
+        text-align: right
+    }
+
+    footer .brand-logo-divider,
+    footer .brand-logo-text {
+        display: inline-block
     }
 }
 

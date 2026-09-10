@@ -13,8 +13,11 @@
 <body>
     <div class="scroll-progress" aria-hidden="true"></div>
     <header class="header">
-        <a class="brand" href="#inicio" aria-label="SMC, voltar ao início"><span
-                class="brand-mark">⌁</span><span>SMC</span></a>
+        <a class="brand brand-logo" href="#inicio" aria-label="SMC, voltar ao início">
+            <span class="brand-logo-main">SMC</span>
+            <span class="brand-logo-divider" aria-hidden="true"></span>
+            <span class="brand-logo-text">Monitoramento de<br>cisternas</span>
+        </a>
         <nav class="nav" aria-label="Navegação principal"><a class="active" href="#inicio">Início</a><a href="#sobre">O
                 sistema</a><a href="#como-funciona">Como funciona</a></nav>
         <a class="header-cta" href="#acesso">Acessar sistema <span>↗</span></a>
@@ -101,7 +104,11 @@
             </div>
         </section>
     </main>
-    <footer><a class="brand" href="#inicio"><span class="brand-mark">⌁</span><span>SMC</span></a>
+    <footer><a class="brand brand-logo" href="#inicio" aria-label="SMC, voltar ao início">
+            <span class="brand-logo-main">SMC</span>
+            <span class="brand-logo-divider" aria-hidden="true"></span>
+            <span class="brand-logo-text">Monitoramento de<br>cisternas</span>
+        </a>
         <p>Sistema de Monitoramento de Cisternas</p><a href="#inicio" class="back-top">Voltar ao topo ↑</a>
     </footer>
     <script src="{% static 'monitoramento/landing/Script.js' %}"></script>
